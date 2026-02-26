@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+}
+
+#body2{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr 3fr 3fr 3fr 1fr;
+    grid-template-areas: "header header"
+                "sidebar main"
+                "sidebar main"
+                "sidebar main"
+                "sidebar main"
+                "footer footer";
+    height: 100vh;
+}
+
+h1{
+    align-self: center;
+}
+
+h2{
+    align-self: center;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    font-size: 2rem;
+    max-height: 17vh;
+}
+
+aside{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    font-size: 1.5rem;
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 3rem);
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    max-height: 17vh;
+}
+
+@media (max-width: 1200px) {
+  #body2{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 3fr 3fr 3fr 3fr 1fr;
+    }
+    header{
+        font-size: 1.5rem;
+    }
+    main{
+        font-size: 1.8rem;
+    }
+    aside{
+        font-size: 1rem;
+    }
+    footer{
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 992px) {
+  #body2{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 3fr 3fr 3fr 3fr 1fr;
+    }
+    header{
+        font-size: 1.4rem;
+    }
+    main{
+        font-size: 1.5rem;
+    }
+    aside{
+        font-size: 0.9rem;
+    }
+    footer{
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+  #body2{
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 3fr 3fr 3fr 3fr 1fr;
+    }
+    header{
+        font-size: 1.2rem;
+    }
+    main{
+        font-size: 1.5rem;
+    }
+    aside{
+        font-size: 0.8rem;
+    }
+    footer{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #body2{
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 4fr 4fr 4fr 4fr 1fr;
+    }
+    header{
+        font-size: 1rem;
+    }
+    main{
+        font-size: 1.3rem;
+    }
+    aside{
+        font-size: 0.7rem;
+    }
+    footer{
+        font-size: 1rem;
+    }
+}
+
+
