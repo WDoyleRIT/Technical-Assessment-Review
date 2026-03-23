@@ -7,7 +7,6 @@ const clickHandler = async () => {
     const response = await fetch(url);
     const data = await response.json();
     input.value = null;
-    console.log();
 }
 
 button.addEventListener('click', clickHandler);
